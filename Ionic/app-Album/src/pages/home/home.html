@@ -1,0 +1,119 @@
+<style>
+	/* Estilo do card, container das imagens */
+	.card {
+		margin: 5px;
+		border-radius: 5px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #d0d0d0;
+		color: #488aff;
+		margin-top: 8px;
+		background-color: #c0d7ff;
+	}
+
+	/* Cores do texto do card */
+	.card span {
+		color: #676767;
+	}
+
+	/* Cor da toolbar */
+	.toolbar-background {
+		background-color: blue;
+	}
+
+	/* Deixa as bordas da imagem arredondadas */
+	img {
+		border-radius: 10px;
+	}
+
+	h4 {
+		font-size: 14px;
+	}
+</style>
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <h3 style="margin-top: 25px ">Galeria de imagens</h3>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-row class="card">
+		<ion-col col-6>
+			<ion-row>
+				 <h4>Aventura com amigos</h4>
+			</ion-row>
+			<ion-row>
+				<button ion-button color="primary" (click)="opcoes('Aventura com amigos')">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+			</ion-row>
+		</ion-col>
+		<ion-col col-6>
+			<img src="../assets/imgs/img1.jpg">
+		</ion-col>
+	</ion-row>
+	<ion-row class="card">
+		<ion-col col-6>
+			<ion-row>
+				 <h4>Curtindo a natureza</h4>
+			</ion-row>
+			<ion-row>
+				<button ion-button color="primary" (click)="opcoes('Curtindo a natureza')">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+			</ion-row>
+		</ion-col>
+		<ion-col col-6>
+			<img src="../assets/imgs/img2.jpg">
+		</ion-col>
+	</ion-row>
+	<ion-row class="card">
+		<ion-col col-6>
+			<ion-row>
+				 <h4>Dia de caminhada</h4>
+			</ion-row>
+			<ion-row>
+				<button ion-button color="primary" (click)="opcoes('Dia de caminhada')">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+			</ion-row>
+		</ion-col>
+		<ion-col col-6>
+			<img src="../assets/imgs/img3.jpg">
+		</ion-col>
+	</ion-row>
+	<ion-row class="card">
+		<ion-col col-6>
+			<ion-row>
+				 <h4>Olhando o horizonte</h4>
+			</ion-row>
+			<ion-row>
+				<button ion-button color="primary" (click)="opcoes('Olhando o horizonte')">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+			</ion-row>
+		</ion-col>
+		<ion-col col-6>
+			<img src="../assets/imgs/img4.jpg">
+		</ion-col>
+	</ion-row>
+	<ion-row class="card">
+		<ion-col col-6>
+			<ion-row>
+				 <h4>Surfando ao pôr do sol</h4>
+			</ion-row>
+			<ion-row>
+				<button ion-button color="primary" (click)="opcoes('Surfando ao pôr do sol')">
+					<ion-icon name="settings"></ion-icon>
+				</button>
+			</ion-row>
+		</ion-col>
+		<ion-col col-6>
+			<img src="../assets/imgs/img5.jpg">
+		</ion-col>
+	</ion-row>
+</ion-content>
