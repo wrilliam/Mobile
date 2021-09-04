@@ -1,0 +1,63 @@
+<style>
+  .container-text {
+    font-size: 16px;
+    padding: 32px;
+    margin-top: 13%;
+    color: #3c3c3c;
+    background-color: #FFFFFF;
+  }
+
+  .titulo {
+    display: -webkit-box;
+    margin-top: 30px;
+    color: white;
+    border-radius: 29px;
+    background-color: #c5c5c5;
+  }
+
+  .titulo img {
+    width: 60px;
+  }
+
+  .titulo h4 {
+    margin-left: 18px;
+  }
+</style>
+
+<ion-content padding>
+
+  <div class="titulo">
+    <ion-avatar>
+      <img src="../assets/imgs/logoTurismo3.png">
+    </ion-avatar>
+    <h4>Pacote de viagem</h4>
+  </div>
+  <div class="container-text">
+    <h4 text-center>Inclui:</h4>
+    <p>
+      <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+      Passagem aérea;
+    </p>
+    <p>
+      <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+      Passeio para os pontos turísticos;
+    </p>
+    <p>
+      <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+      Hospedagem com 5 diárias;
+    </p>
+    <p>
+      <ion-icon color="primary" name="checkmark-circle"></ion-icon>
+      Café da manhã incluso.
+    </p>
+  </div>
+
+</ion-content>
+
+<ion-footer padding>
+  <div>
+    <img src="../assets/imgs/Modal.jpg">
+  </div>
+  <button color="primary" ion-button block (click)="abrirAlert()">Confirmar</button>
+  <button color="danger" ion-button small block (click)="fecharModal()">Voltar</button>
+</ion-footer>
