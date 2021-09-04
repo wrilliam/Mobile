@@ -1,0 +1,59 @@
+<ion-header> 
+  <ion-navbar color="green" style="padding-top: 20px;">
+    <ion-title>
+      <h2>Agenda</h2>
+    </ion-title>
+	<button (click)="adicionar()" small ion-button color="green-light">
+		<ion-icon name="add"></ion-icon>
+		<span style="margin-left: 7px;">Novo</span>
+	</button>
+     </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <ion-grid>
+		
+		<ion-row class="card-data" *ngFor = "let dados of dadosAgenda, let i = index">
+			<ion-col col-12>
+		  		<ion-row justify-content-between>
+			  		<span class="titulo-cor">compromisso</span>
+					  <ion-toggle color="green" checked={{dados.ativo}} [(ngModel)]="dados.ativo" (ionChange)="ativarCompromisso(i)"></ion-toggle>
+			  		</ion-row>
+				<div class="card-container">
+				  	<ion-row justify-content-between>
+				  		<ion-input value="{{dados.texto}}" [(ngModel)]="dados.texto" placeholder="Digite seu texto aqui."></ion-input>
+				  		</ion-row>
+
+				  		<div>
+				  			<ion-row>
+				  				<ion-item>
+				  					<ion-label color="green-light"><b>Data</b>:</ion-label>
+				  					<ion-datetime [(ngModel)] = "dados.data" min="1990" max="2030"
+				  					dayShortNames="Dom,Seg,Ter,Qua,Qui,Sex,Sab"
+				  					displayFormat="DDD. MMM. DD-YYYY"
+				  					cancelText="Cancelar"
+				  					doneText="OK"
+				  					placeholder="Definir data"
+				  					monthShortNames="Jan, Fev,Mar,Abr,Mai,Jun,Jul,Ago,Set,Out,Nov,Dez"></ion-datetime>
+				  				</ion-item>
+				  			</ion-row>
+				  		</div>
+				  	</div>
+				  </ion-col>
+				</ion-row>
+			</ion-grid>
+ </ion-content>
+
+ <ion-footer style="background-color: #b8e0d2;" text-center padding>
+	<button (click)="limpar()" small ion-button color="green-light">
+		<ion-icon name="trash"></ion-icon>
+		<span style="margin-left: 7px;">Limpar</span>
+	</button>
+
+	<button (click)="mudarStatus(true)" small ion-button color="green-light">
+		<span style="margin-left: 7px;">Ativar todos</span>
+	</button>
+	<button (click)="mudarStatus(false)" small ion-button color="green-light">
+		<span style="margin-left: 7px;">Desativar todos</span>
+	</button>
+</ion-footer>
