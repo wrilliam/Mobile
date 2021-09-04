@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lista
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Quiz</ion-list-header>
+    <ion-item-group reorder="true" (ionItemReorder)="reordenarItens($event)">
+      <ion-item-sliding *ngFor="let item of items">
+        <ion-item-options side="right">
+          <button ion-button color="secondary" (click)="btn('Sim')">Sim</button>
+          <button ion-button color="danger" (click)="btn('Não')">Não</button>
+        </ion-item-options>
+        <ion-item-options side="left">
+          <button ion-button color="dark" (click)="op('Português')">Português</button>
+        </ion-item-options>
+        <ion-item>{{item}}</ion-item>
+      </ion-item-sliding>
+      <ion-item-sliding>
+        <ion-item>
+          <p>Arraste a barra até</p>
+          <p>o resultado da conta:</p>
+          5+2*3
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="dark" (click)="op('Matemática')">Matemática</button>
+        </ion-item-options>
+      </ion-item-sliding>
+      <ion-range color="secondary" pin min="0" max="25" step="1">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>25</ion-label>
+      </ion-range>
+    </ion-item-group>
+  </ion-list>
+</ion-content>
